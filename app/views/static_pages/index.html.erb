@@ -1,0 +1,63 @@
+<!-- Image Background Page Header -->
+<!-- Note: The background image is set within the business-casual.css file. -->
+<header class="business-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="tagline">The Derek Zoolander Center For Kids Who Can't Read Good And Wanna Learn To Do Other Stuff Good Too</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>What We Do</h2>
+      <p><%= Faker::Lorem.paragraphs.join(" ") %></p>
+      <p><%= Faker::Lorem.paragraphs.join(" ") %></p>
+      <p>
+        <%= link_to 'View Our Library &raquo;'.html_safe, '/library', class: 'btn btn-default btn-lg' %>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h2>Contact Us</h2>
+      <address>
+        <strong>The Derek Zoolander Center...</strong>
+        <br><%= Faker::Address.street_address %>
+        <br><%= "#{Faker::Address.city}, #{Faker::Address.state_abbr} #{Faker::Address.zip}" %>
+        <br>
+      </address>
+      <address>
+        <abbr title="Phone">P:</abbr> <%= Faker::PhoneNumber.cell_phone %>
+        <br>
+        <abbr title="Email">E:</abbr> <a href="mailto:#"><%= Faker::Internet.email %></a>
+      </address>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <img class="img-circle img-responsive img-center" src="<%= Faker::Avatar.image %>" alt="">
+      <h2><%= Faker::Lorem.words.join(" ") %></h2>
+      <p><%= Faker::Lorem.paragraphs.join(" ") %></p>
+    </div>
+    <div class="col-sm-4">
+      <img class="img-circle img-responsive img-center" src="<%= Faker::Avatar.image %>" alt="">
+      <h2><%= Faker::Lorem.words.join(" ") %></h2>
+      <p><%= Faker::Lorem.paragraphs.join(" ") %></p>
+    </div>
+    <div class="col-sm-4">
+      <img class="img-circle img-responsive img-center" src="<%= Faker::Avatar.image %>" alt="">
+      <h2><%= Faker::Lorem.words.join(" ") %></h2>
+      <p><%= Faker::Lorem.paragraphs.join(" ") %></p>
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.container -->
